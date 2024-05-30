@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, Button } from '@mui/material';
+import { useAuth } from '../../context/AuthContext';
 import Counter from '../Counter/Counter';
 import UserDataForm from '../UserDataForm/UserDataForm';
 import RichTextEditor from '../RichTextEditor/RichTextEditor';
 import './Dashboard.css';
 
 const Dashboard: React.FC = () => {
+  const { logout } = useAuth();
   const [userData, setUserData] = useState({
     id: '',
     name: '',
@@ -21,8 +23,12 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="dashboard">
-      <Typography variant="h2" className="title">Dashboard</Typography>
-      <Grid container spacing={4}>
+      <div className="header">
+        <Typography variant="h6" className="title">Dashboard</Typography>
+        <Button variant="contained" color="error" onClick={logout}>Logout</Button>
+      </div>
+      <div className="dashboard-container">
+      <Grid container spacing={4} >
         <Grid item xs={12} md={6}>
           <Counter />
         </Grid>
@@ -33,6 +39,7 @@ const Dashboard: React.FC = () => {
           <UserDataForm onSave={handleSave} />
         </Grid>
       </Grid>
+      </div>
     </div>
   );
 };
