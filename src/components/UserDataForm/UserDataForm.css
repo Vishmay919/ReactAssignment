@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    margin-bottom: 10px;
+  }
+  
+  .textField {
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    align-self: flex-start;
+  }
+  
+  .savedData {
+    margin-top: 20px;
+  }
+  

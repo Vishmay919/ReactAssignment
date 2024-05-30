@@ -1,0 +1,19 @@
+.counter {
+    text-align: center;
+    min-height: 180px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .buttonContainer .MuiButton-root {
+    min-width: 80px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  

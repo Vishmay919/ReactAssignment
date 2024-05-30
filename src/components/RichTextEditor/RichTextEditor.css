@@ -1,0 +1,14 @@
+.editorContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+    max-height: 200px;
+    overflow: auto;
+  }
+  
+  .quill .ql-container{
+    border-radius: 5px;
+    margin: 0 !important; 
+    padding: 0 !important;
+  }
+  
